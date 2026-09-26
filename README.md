@@ -1,150 +1,150 @@
 # 🚢 Titanic Survival Prediction
 
-This project predicts whether a passenger would survive the Titanic disaster using a **Logistic Regression model**.
+A machine learning project that predicts whether a Titanic passenger would **survive or not survive** based on passenger information such as class, gender, age, family members, fare, and embarkation port.
+
+The project uses **Logistic Regression** for binary classification and includes data preprocessing, exploratory data analysis, model evaluation, and an interactive **Streamlit web application**.
 
 ---
 
-## 📌 Project Overview
+## ✅ Features
 
-The goal of this project is to:
-
-* Perform **Exploratory Data Analysis (EDA)**
-* Preprocess the dataset
-* Build a **Logistic Regression model**
-* Evaluate model performance
-* Deploy the model using **Streamlit**
-
----
-
-## 📊 Dataset
-
-* Dataset: Titanic Dataset
-* Features include:
-
-  * Passenger Class (Pclass)
-  * Gender (Sex)
-  * Age
-  * Fare
-  * Number of relatives (SibSp, Parch)
-  * Embarked Port
-
----
-
-## ⚙️ Technologies Used
-
-* Python
-* Pandas
-* NumPy
-* Seaborn & Matplotlib
-* Scikit-learn
-* Streamlit
-
----
-
-## 🔍 Exploratory Data Analysis (EDA)
-
-Key insights:
-
-* Females had a higher survival rate than males
-* Passengers in higher classes were more likely to survive
-* Age had moderate impact on survival
-
----
-
-## 🧹 Data Preprocessing
-
-* Handled missing values:
-
-  * Age → Median
-  * Embarked → Mode
-* Dropped unnecessary columns:
-
-  * Name, Ticket, Cabin, PassengerId
-* Encoded categorical variables:
-
-  * Sex → Numeric
-  * Embarked → One-hot encoding
-
----
-
-## 🤖 Model Building
-
-* Model: Logistic Regression
-* Data split into training and testing sets
-* Trained using Scikit-learn
-
----
-
-## 📈 Model Evaluation
-
-Metrics used:
-
-* Accuracy
-* Precision
-* Recall
-* F1 Score
-* ROC-AUC Score
-
----
-
-## 🚀 Deployment
-
-The model is deployed using **Streamlit**.
-
-### ▶️ Run the App
-
-1. Install dependencies:
-
-```
-pip install streamlit
-```
-
-2. Run the app:
-
-```
-streamlit run app.py
-```
-
-3. Open in browser:
-
-```
-http://localhost:8501
-```
+* 🚢 Predicts passenger survival
+* 🤖 Uses Logistic Regression for classification
+* 🧹 Handles missing values and categorical features
+* 📊 Includes Exploratory Data Analysis (EDA)
+* 📈 Evaluates model performance using multiple metrics
+* 📐 Includes ROC-AUC analysis
+* 💾 Saves the trained model using Pickle
+* 🌐 Interactive Streamlit prediction interface
+* 🎯 Displays prediction probability
 
 ---
 
 ## 🧠 How It Works
 
-User inputs passenger details →
-Model processes input →
-Predicts survival →
-Displays result with probability
+The system follows a simple machine learning workflow:
+
+**Dataset → Data Preprocessing → Feature Engineering → Train/Test Split → Logistic Regression → Model Evaluation → Streamlit Prediction**
+
+The model uses the following features:
+
+* Passenger Class
+* Sex
+* Age
+* Siblings/Spouses
+* Parents/Children
+* Fare
+* Embarkation Port
+
+---
+
+## 📊 Model Performance
+
+The model was evaluated on a held-out test dataset using an 80/20 train-test split.
+
+| Metric            |  Score |
+| ----------------- | -----: |
+| Training Accuracy | 80.00% |
+| Test Accuracy     | 81.01% |
+| Precision         | 78.57% |
+| Recall            | 74.32% |
+| F1 Score          | 76.39% |
+| ROC-AUC           | 88.25% |
+
+---
+
+## 🌐 Streamlit Application
+
+The trained model is integrated into a Streamlit web application where users can enter passenger details and receive:
+
+* **Survival Prediction**
+* **Survival Probability**
+
+The application provides a simple interface for interacting with the trained machine learning model.
+
+---
+
+## 🛠️ Technologies Used
+
+| Technology               | Purpose              |
+| ------------------------ | -------------------- |
+| **Python**               | Programming          |
+| **Pandas**               | Data Processing      |
+| **NumPy**                | Numerical Operations |
+| **Scikit-learn**         | Machine Learning     |
+| **Matplotlib & Seaborn** | Data Visualization   |
+| **Streamlit**            | Web Application      |
+| **Pickle**               | Model Serialization  |
+| **Jupyter Notebook**     | Model Development    |
 
 ---
 
 ## 📁 Project Structure
 
-```
+```text
 Titanic_Project/
 │
-├── app.py          # Streamlit application
-├── model.pkl       # Trained model
-├── README.md       # Project documentation
+├── app.py
+├── code.ipynb
+├── model.pkl
+├── Titanic_train.csv
+├── Titanic_test.csv
+├── requirements.txt
+└── README.md
 ```
+
+---
+
+## ⚙️ How to Run
+
+### 1. Clone the Repository
+
+Clone the project from GitHub and open the project directory.
+
+### 2. Install Dependencies
+
+Install the required packages using the provided `requirements.txt` file.
+
+### 3. Run the Application
+
+Launch the Streamlit application and open the provided local URL in your browser.
+
+---
+
+## 🎓 Concepts Demonstrated
+
+* Supervised Machine Learning
+* Binary Classification
+* Logistic Regression
+* Data Preprocessing
+* Exploratory Data Analysis
+* Feature Engineering
+* Model Evaluation
+* ROC-AUC Analysis
+* Model Serialization
+* Streamlit Deployment
+
+---
+
+## 🚀 Future Improvements
+
+* Compare multiple classification algorithms
+* Add cross-validation and hyperparameter tuning
+* Add interactive model-performance visualizations
+* Improve input validation
+* Deploy the application online
+* Build a complete preprocessing and prediction pipeline
 
 ---
 
 ## 👨‍💻 Author
 
-**SWESKHA SHARMA**
+**BANSARI NIMBALKAR**
+
+Computer Science / Data Science Graduate
+
+**Project:** Titanic Survival Prediction — Machine Learning & Streamlit
 
 ---
 
-## ⭐ Conclusion
-
-This project demonstrates:
-
-* End-to-end Machine Learning workflow
-* Data preprocessing and visualization
-* Model building and evaluation
-* Real-world deployment using Streamlit
+⭐ If you found this project useful, consider giving the repository a star.
